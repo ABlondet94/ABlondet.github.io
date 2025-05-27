@@ -14,7 +14,7 @@ sequenceDiagram
     end
 
     TargetServer->>Firewall: Send traffic for filtering
-    Firewall-->>TargetServer: Allow/Deny based on rules
+    Firewall-->>TargetServer: Allow/Deny/report based on rules
     Firewall->>MonitoringSystem: Alert high traffic levels
 
     MonitoringSystem->>Firewall: Trigger mitigation (rate limiting, block IPs)
