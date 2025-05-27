@@ -13,8 +13,8 @@ sequenceDiagram
         Botnet->>TargetServer: Flood with HTTP requests
     end
 
-    TargetServer->>Firewall: Send traffic for filtering
-    Firewall-->>TargetServer: Allow/Deny/report based on rules
+    TargetServer->>Firewall: Initiate Filtering
+    Firewall-->>TargetServer: Allow/Deny/Report based on rules
     Firewall->>MonitoringSystem: Alert high traffic levels
 
     MonitoringSystem->>Firewall: Trigger mitigation (rate limiting, block IPs)
