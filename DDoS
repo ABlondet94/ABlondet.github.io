@@ -1,6 +1,3 @@
-# Distributed Denial of Service (DDoS) Attack - Sequence Diagram
-
-```mermaid
 sequenceDiagram
     participant Attacker
     participant Botnet
@@ -21,3 +18,4 @@ sequenceDiagram
     Firewall->>Botnet: Block malicious IPs
 
     TargetServer-->>LegitimateUsers: Service degradation or denial
+
