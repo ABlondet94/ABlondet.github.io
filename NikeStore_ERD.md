@@ -1,38 +1,24 @@
-#Nike ERDiagram
+# Distributed Denial of Service (DDoS) Attack - Sequence Diagram
 
-erDiagram
-    PRODUCT {
-        int product_id PK
-        string Nike
-        string category
-        string Adult
-        float $100+
-    }
+```mermaid
+sequenceDiagram
+    participant Attacker
+    participant Botnet
+    participant Firewall
+    participant TargetServer
+    participant MonitoringSystem
 
-    CUSTOMER {
-        int customer_id PK
-        string first_name
-        string last_name
-        string email
-        string phone
-    }
+    Attacker->>Botnet: Command bots to initiate DDoS
+    loop Amplified Requests
+        Botnet->>TargetServer: Flood with HTTP requests
+    end
 
-    SALE {
-        int sale_id PK
-        date sale_date
-        int customer_id FK
-        int product_id FK
-        int quantity
-        float total_price
-    }
+    TargetServer->>Firewall: Send traffic for filtering
+    Firewall-->>TargetServer: Allow/Deny based on rules
+    Firewall->>MonitoringSystem: Alert high traffic levels
 
-    INVENTORY {
-        int inventory_id PK
-        int product_id FK
-        int quantity_in_stock
-        string warehouse_location
-    }
+    MonitoringSystem->>Firewall: Trigger mitigation (rate limiting, block IPs)
+    Firewall->>Botnet: Block malicious IPs
 
-    CUSTOMER ||--o{ SALE : places
-    PRODUCT ||--o{ SALE : includes
-    PRODUCT ||--|| INVENTORY : stocked_in
+    TargetServer-->>LegitimateUsers: Service degradation or denial
+
