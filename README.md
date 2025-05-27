@@ -2,7 +2,7 @@
 
 1. Adrian Ethen Blondet adrian92foxtrot@gmail.com
 2. This will be my school account for CTI-110
-3. This repository will hold assignments from CTI-110
+3. This repository will hold assignments from CTI-110 as well
 4. #About me#
 5. ##MY Interest and Hobbies##
 6. Some interest of mine include **working out**, **family time**, going to the **range**, learning new **factual information** and **riding my motorcycle**. Recently since getting out of the military and have graduated with my accounting degree in Spring 2025, I've really been getting involved with reading as well, especialy in areas involving **psychology** and **reverse psychology**. Currently I'm reading two books, _Don't give the enemy a seat at your table_ by Louie Giglio, and _Dark Psychology and Manipulation_ by Mario Scott.
